@@ -1,0 +1,173 @@
+---
+---
+{{ reference }} 
+
+
+<div class= "container" >
+ 
+ <div class="btn-group">
+			<button type="button" class="btn btn-info btn-xs dropdown-toggle" data-toggle="dropdown">
+				Bib Entry
+				<span class="caret"></span>
+			</button>
+			<ul class="dropdown-menu dropdown-menu-left" role="menu">
+				<li><pre>{{ entry.bibtex }}</pre></li>
+			</ul>
+		</div>
+        
+        
+	    <div class="btn-group">
+{% if entry.file %} 
+				<a role="button" class="btn btn-primary btn-xs" href="../pdfs/papers/{{ entry.key }}.pdf" target="_blank">PDF</a>
+			{% endif %}
+    </div>
+   
+    
+    	    <div class="btn-group">
+{% if entry.url %} 
+				<a role="button" class="btn btn-warning btn-xs" href="{{ entry.url }}" target="_blank">Link</a>
+			{% endif %}
+    </div>
+		
+    
+    
+     
+      {% if entry.abstract %}
+    <a class="btn btn-success btn-xs" role="button" data-toggle="collapse" href="#{{key}}-abstract" aria-expanded="false" aria-controls="{{key}}-abstract">  
+  Abstract
+        <span class="caret"></span>
+</a>
+<div class="collapse" id="{{key}}-abstract">
+  <div class="well">
+    {{ entry.abstract }}
+  </div>
+</div>
+{% endif %}
+    
+ 
+    
+   
+         
+    
+ <!--
+       
+
+     <div class="btn-group">
+			<button type="button" class="btn btn-info btn-xs dropdown-toggle" data-toggle="dropdown">
+				Bib Entry
+				<span class="caret"></span>
+			</button>
+			<ul class="dropdown-menu dropdown-menu-left" role="menu">
+				<li><pre>{{ entry.bibtex }}</pre></li>
+			</ul>
+		</div>
+        
+        
+	    <div class="btn-group">
+{% if entry.pdf %} 
+				<a role="button" class="btn btn-danger btn-xs" href="../pdfs/{{ entry.key }}.pdf" target="_blank">PDF</a>
+			{% endif %}
+    </div>
+   
+		<div class="btn-group">
+			<button type="button"  class="btn btn-warning btn-xs dropdown-toggle" data-toggle="dropdown">
+				Links
+				<span class="caret"></span>
+			</button>
+			<ul class="dropdown-menu dropdown-menu-left" role="menu">
+				{% if entry.doi %}  
+				<li><a  href="{{ entry.doi }}" target="_blank">publisher link (DOI)</a></li>
+        {% if entry.url %} 
+				<li><a  href="{{ entry.url }}" target="_blank" target="_blank">journal/conference website</a></li> 
+			{% endif %}
+			{% endif %}
+			</ul>
+		</div>
+    
+    
+    
+
+    <div id="{{key}}-materials" >
+    {% if entry.abstract %}
+    <a class="btn btn-primary btn-xs" data-toggle="collapse" href="#{{key}}-abstract">Abstract</a>
+    {% endif %}
+{% if entry.abstract %}
+  <p id="{{key}}-abstract" class="collapse">{{ entry.abstract }}</p>
+  {% endif %}
+</div>
+   
+-->
+    
+    </div>
+
+       
+    
+     
+ 
+   
+    
+    
+    
+    
+    
+    
+
+         
+
+
+
+
+
+
+
+
+  <!--
+    
+			{% if entry.slides %} 
+				<a role="button" class="btn btn-primary btn-xs" href="../pdfs/{{ entry.key }}_slides.pdf" target="_blank">slides</a>
+			{% endif %}
+			{% if entry.poster %} 
+				<a role="button" class="btn btn-primary btn-xs" href="../pdfs/{{ entry.key }}_poster.pdf" target="_blank">poster</a>
+			{% endif %}
+			{% if entry.code %} 
+				<a role="button" class="btn btn-info btn-xs" href="../pdfs/{{ entry.code }}" target="_blank">code</a>
+			{% endif %}
+			{% if entry.github %}
+				<a role="button" class="btn btn-info btn-xs" href="{{ entry.github }}" target="_blank">code on github</a>
+			{% endif %}
+       -->
+        
+        
+        
+        
+        
+		<!--	{% if entry.doi %}  
+				<a role="button" class="btn btn-warning btn-xs" href="{{ entry.doi }}" target="_blank">publisher link (DOI)</a> 
+			{% endif %}
+			{% if entry.url %} 
+				<a role="button" class="btn btn-warning btn-xs" href="{{ entry.url }}" target="_blank" target="_blank">publisher link</a> 
+			{% endif %}
+			{% if entry.website %} 
+				<a role="button" class="btn btn-warning btn-xs" href="{{ entry.website }}" target="_blank">journal/conference website</a>
+			{% endif %}  -->
+	
+	<!--<br><br>-->
+
+
+
+
+
+<!--
+<a class="btn btn-primary" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+  Link with href
+</a>
+<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+  Button with data-target
+    <span class="caret"></span>
+</button>
+<div class="collapse" id="collapseExample">
+  <div class="well">
+    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+  </div>
+</div>
+-->
